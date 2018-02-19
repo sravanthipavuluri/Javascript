@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Sample</title>
+	<style type="text/css">
+		body{
+			background-color: white;
+		}
+		#imghead{
+			width:100%;
+			text-align: center;
+		}
+		#ntimg{
+			width:300px;
+			height:300px;
+			border-radius: 5px;
+			/*margin-left: 40%;*/
+		}
+		
+	</style>
+	<script type="text/javascript">
+		function showDetailimage(){
+			alert("in showDetailimage");
+			document.getElementById("ntimg").style.opacity=0.1;
+			document.getElementById("imghead").style.opacity=0.8;
+
+
+			var divele = document.createElement("div");
+			divele.setAttribute("id","div1");
+			divele.setAttribute("style","text-align:center;position:fixed;z-index:1;padding-top:100px;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.9);");
+			
+			var ntspan=document.createElement("span");
+			var txtnode=document.createTextNode("Close");
+			ntspan.appendChild(txtnode);
+		    ntspan.setAttribute("style","position:absolute;top:15px;right:35px;color:#f1f1f1;font-size:40px;font-weight:bold;cursor:pointer;transition: 0.3s;");
+
+			var ntimgele = document.createElement("img");
+		    ntimgele.setAttribute("src", "nature.jpg");
+		    ntimgele.setAttribute("height", "500");
+		    ntimgele.setAttribute("alt", "The popup image");
+		    ntimgele.setAttribute("style","margin:auto;display:block;width:80%;border-radius:10px;");
+
+		    divele.appendChild(ntspan);
+		    divele.appendChild(ntimgele);
+		    document.body.appendChild(divele);
+		}
+
+	</script>
+</head>
+<body>
+	<div id="imghead">
+		<h1>Welcome to Digital Lync....</h1>
+		<img id="ntimg" src="nature.jpg"  onclick="showDetailimage();">
+		  
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			background-color: yellow;
+		}
+		/*input[type=text]{
+			padding: 10px;
+			margin: 5% 5% 5% 15%;
+			border-radius: 7px;
+
+		}
+		*/
+		form{
+			background-color: lightblue;
+			border:1px solid red;
+			padding: 5% 10% 10% 10%;
+			border-radius: 10px;
+		}
+	</style>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<h1>Registration Form</h1>
+		<form>
+			<div class="form-group">
+				<label for="email">First Name:</label>
+				<input type="text" class="form-control" id="txtFname" placeholder="Enter First Name" onblur="ValidateDetails();checkReplica();removeAlert(this,'onblur');">
+		    </div>
+		    <div class="form-group">
+				<label for="email">Last Name:</label>
+				<input type="text" id="txtLname" class="form-control" placeholder="Enter Last Name" onblur="ValidateDetails();removeAlert(this,'onblur');">
+			</div>
+			<div class="form-group">
+			  <label for="sel1">Branch</label>
+			  <select class="form-control" id="selBranch" onchange="ValidateDetails();removeAlert(this,'onchange');">
+			  	<option>-Select Branch-</option>
+			    <option>CSE</option>
+			    <option>EEE</option>
+			    <option>ECE</option>
+			    <option>CIVIL</option>
+			  </select>
+			</div>
+
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="text" class="form-control" id="txtEmail" placeholder="Enter Email" onblur="ValidateDetails();removeAlert(this,'onblur');">
+			</div>
+			<div class="form-group">
+				<label for="email">Password:</label>
+				<input type="Password" class="form-control" id="txtPassword" placeholder="Enter Password" onblur="ValidateDetails();removeAlert(this,'onblur');">
+			</div>
+			<div class="radio">
+				<label><input type="radio" id=rdMale name="Gender" value="Male" onclick="ValidateDetails();removeAlert(this,'onclick');">Male</label>
+				<label><input type="radio" id=rdFemale name="Gender" value="Female" onclick="ValidateDetails();removeAlert(this,'onclick');">Female</label>
+			</div>
+    		<button type="button" class="btn btn-default" id="btnSubmit" onclick="SubmitDetails();" disabled>Submit</button>
+			<input type="button" class="btn btn-default" id="btnReset" value="Reset" onclick="ResetDetails();">
+
+			<input type="button" class="btn btn-default" id="btnClear" value="Clear" onclick="clearLocalStorage();">
+		</form>
+
+		<script type="text/javascript" src="regformjs.js"></script>
+	</div>
+</body>
+</html>

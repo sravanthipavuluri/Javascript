@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get the sum of the numbers in the array.</p>
+<button onclick="numbers.forEach(myFunction)">Try it</button>
+
+<p>Sum of numbers in array: <span id="demo"></span></p>
+
+<script>
+var sum = 0;
+var numbers = [65, 44, 12, 4];
+
+function myFunction(item) {
+    sum += item;
+    demo.innerHTML = sum;
+}
+</script>
+
+</body>
+</html>

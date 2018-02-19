@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to reverse the order of the elements in the array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var array1 = [1, 4, 9, 16];
+document.getElementById("demo").innerHTML = array1;
+
+function myFunction() {
+    map1 = array1.map(x => x * 2);
+    document.getElementById("demo").innerHTML = map1;
+}
+</script>
+
+</body>
+</html>

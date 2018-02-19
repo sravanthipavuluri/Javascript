@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to reverse the order of the elements in the array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+document.getElementById("demo").innerHTML = words;
+
+function myFunction() {
+    result = words.filter(word => word.length > 6);
+    document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ObjectSample</title>
+	<script type="text/javascript">
+		function persondata(){
+			var person={
+				name:'Sravanthi',
+				age:30,
+				branch:'mca',
+				year:2009,
+				greeting: function(){
+					alert("hello Welcome to Digital Lync Guntur");
+				}
+			}
+			document.getElementById("demo").innerHTML="Name: "+person.name+"<br>"+"Age: "+person.age+"<br>"+"Banch: "+person.branch+"<br>"+"Greeting : "+person.greeting();
+	    }
+
+
+
+
+	</script>
+</head>
+<body>
+	<p id="demo"></p>
+	<input type="button" value="Click Me" onclick="persondata();">
+</body>
+</html>

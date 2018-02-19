@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-Do Application</title>
+	<link rel="stylesheet" type="text/css" href="todocss.css">
+	
+</head>
+<body>
+	<div class="container">
+		<div>
+			<p class="pmargin">ADD ITEM</p>
+			<hr class="hrthickline">
+			<input type="text" id="txtItemName" placeholder="Item Name" size="50">
+			<input type="button" id="btnAdd" value="Add"> <!-- onclick="AddTask();" -->
+		</div>
+		<div>
+			<p class="pmargin">TODO</p>
+			<hr class="hrthickline">
+			<ul id="incomplete-list">
+				<li>
+					<input type="checkbox" name="chktodo">
+					<input class="clsedit" type="text" name="txtItemName" value="Go Shopping" size="40">
+					<label class="clseditToggle">Go Shopping</label>
+					<input type="button" class="btnedit" name="btnEdit" value="Edit">
+					<input type="button" class="btndelete" name="btnDelete" value="Delete">
+					<hr class="hrthinline">
+				</li>
+				<li>
+					<input type="checkbox" name="chktodo">
+					<input class="clseditToggle" type="text" name="txtItemName" value="Go Shopping" size="40">
+					<label class="clsedit">Pay Bills</label>
+					<input type="button" class="btnedit" name="btnEdit" value="Edit">
+					<input type="button" class="btndelete" name="btnDelete" value="Delete">
+					<hr class="hrthinline">
+				</li>
+			</ul>
+		</div>
+		<div>
+			<p class="pmargin">COMPLETED</p>
+			<hr class="hrthickline">
+			<ul id="complete-list">
+				<li>
+					<input type="checkbox" name="chktodo" checked>
+					<label class="lbldef">See The Doctor</label>
+					<input type="button" class="btnedit" name="btnEdit" value="Edit">
+					<input type="button" class="btndelete" name="btnDelete" value="Delete">
+					<hr class="hrthinline">
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="./todoscript.js"></script>
+</body>
+</html>

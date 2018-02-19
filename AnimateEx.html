@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation JS</title>
+	<style type="text/css">
+		#container{
+			background-color: yellow;
+			border-radius: 10px;
+			width: 400px;
+  			height: 400px;
+			position: relative;
+		}
+		#animate{
+			background-color: red;
+			border-radius: 10px;
+			width: 50px;
+			height:50px;
+			position: relative;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id ="animate"></div>
+	</div>
+	<button onclick="myMove()">Click Me</button>
+	<script type="text/javascript">
+		function myMove(){
+			var flag=false;
+			var ele=document.getElementById("animate");
+			var left=0,rightlen=0;
+			var toplen=0,bottomlen=0;
+			var id= setInterval(movechild,5);
+			function movechild(){
+				if(left==350){
+					//clearInterval(id);
+					if(toplen==350){
+						left--;
+						ele.style.left= left+'px';
+					}
+					else{
+						toplen++;
+						ele.style.top= toplen+'px';
+					}
+				}
+				else if(toplen==350){
+					if(left==0&& toplen==350){
+				 		toplen--;
+				 		ele.style.top= toplen+'px';
+				 	}else{
+						left--;
+						ele.style.left= left+'px';
+					}
+				}
+				else if((left==0 || left<350) && toplen==350){
+				 		toplen--;
+				 		ele.style.top= toplen+'px';
+				 }
+				 else if(left<=350 && toplen==0)
+				{
+						left++;
+						ele.style.left= left+'px';
+				}
+			}
+
+		}
+	</script>
+</body>
+</html>

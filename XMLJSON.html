@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>XML HTTP Request JSON</title>
+	 <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <style type="text/css">
+	  	*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			background-color: lightblue;
+		}
+	  </style>
+</head>
+<body>
+		<div class="container" well>
+			<h1>JSON Data In Table</h1>
+			<div id="result">
+				
+			</div>
+		</div>
+
+
+		<script>
+			var xmlhttp = new XMLHttpRequest();
+			var url = "https://jsonplaceholder.typicode.com/posts/";
+
+			xmlhttp.onreadystatechange = function() {
+			    if (this.readyState == 4 && this.status == 200) {
+			        var myArr = JSON.parse(this.responseText);
+			        myFunction(myArr);
+			    }
+			};
+			xmlhttp.open("GET", url, true);
+			xmlhttp.send();
+
+			function myFunction(arr) {
+			    var resultText;
+			    if(arr.length>0){
+			    	resultText = "<table class='table table-bordered' style='background-color:white;border:3px solid red;'>";
+			    	resultText += "<tr style='border:3px solid red;'><th style='border:3px solid red;'>UserId</th><th style='border:3px solid red;'>Id</th><th style='border:3px solid red;'>Title</th><th style='border:3px solid red;'>Body</th></tr>";
+				    for(i = 0; i < arr.length; i++) {
+				    	resultText += "<tr style='border:3px solid red;'><td style='border:3px solid red;'>"+arr[i].userId+"</td><td style='border:3px solid red;'>"+arr[i].id+"</td><td style='border:3px solid red;'>"+arr[i].title+"</td><td style='border:3px solid red;'>"+arr[i].body+"</td></tr>";
+				        console.log(resultText);
+				    }
+				    resultText+="</table>";
+				}
+			    document.getElementById("result").innerHTML = resultText;
+			}
+		</script>
+
+</body>
+</html>

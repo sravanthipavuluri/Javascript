@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gmap</title>
+	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+	<script type="text/javascript">
+		function myMap() {
+	    var mapOptions = {
+	        center: new google.maps.LatLng(51.5, -0.12),
+	        zoom: 10,
+	        mapTypeId: google.maps.MapTypeId.HYBRID
+	    }
+		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+		}
+
+
+
+
+	</script>
+</head>
+<body>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.1775105517254!2d80.42668458991646!3d16.313871784046935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a358a9f9378d7a3%3A0xb1e53c73f22b3263!2sSri+Sai+Baba+Mandir!5e0!3m2!1sen!2sin!4v1517470706000" width="800" height="800" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+<div id="map" style="width:400px;height:400px">
+</body>
+</html>

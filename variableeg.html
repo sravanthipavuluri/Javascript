@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variables</title>
+	<script type="text/javascript">
+		function display(){
+			var a,b;
+			a=10;
+			b=20;
+			var c=a+b;
+			document.getElementById("demo").innerHTML = "Welocme To Digital Lync  "+c;
+		}
+		function calulate(){
+			a=10;
+			b=20;
+			var c=a+b;
+			document.getElementById("demo").innerHTML = "Total:  "+c+typeof c;
+			var a,b;
+			var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+			person = undefined; 
+			document.getElementById("demo").innerHTML = person;
+			
+			document.getElementById("typetest").innerHTML=  typeof {name:'john', age:34} + "<br>" +
+															typeof [1,2,3,4] + "<br>" +
+															typeof null + "<br>" +
+															typeof function myFunc(){};
+
+
+		}
+	</script>
+</head>
+<body>
+	<p id="demo"></p>
+	<p id="typetest"></p>
+<input type="button" name="click" value="clickme" onclick="display();">
+<input type="button" name="click" value="calculate" onclick="calulate();">
+</body>
+</html>

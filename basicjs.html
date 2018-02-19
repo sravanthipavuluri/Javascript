@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Javascript</title>
+	<script>
+		function displaydate(){
+			document.getElementById('demo').innerHTML= 'Hello JavaScript'+"  "+Date();
+			document.getElementById('demo').style.fontSize= '35px';
+		}
+
+
+
+	</script>
+</head>
+<body>
+	<input type="button" name="ClickMe" value="Click Me" onclick="displaydate();">
+	<p id="demo">Hello Digital Lync.....</p>
+
+	<img id="myimage" src="pic_bulboff.gif" alt="bulb display">
+	<input type="button" name="ClickMe" value="Turn On" onclick="document.getElementById('myimage').src='pic_bulbon.gif';">
+	<input type="button" name="ClickMe" value="Turn Off" onclick="document.getElementById('myimage').src='pic_bulboff.gif';">
+
+</body>
+</html>
